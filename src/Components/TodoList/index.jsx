@@ -24,7 +24,7 @@ function TodoList(props) {
         <div>
             <ul className="todo-list">
                 {todos.map(todo => (
-                    <li key={todo.id}
+                    <li key={Date.now() + todo.id}
                         onClick={() => handelClick(todo)}
                     >
                         {todo.title}
